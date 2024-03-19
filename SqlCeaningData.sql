@@ -69,6 +69,8 @@ case
     substring_index(SaleDate," ",-1)
  
  );
+Alter table housingdata
+add DateConverted Date;
 
 UPDATE housingdata
 SET DateConverted = STR_TO_DATE(SaleDate, '%d-%m-%Y');
